@@ -1,4 +1,4 @@
-name: HV BLE FINDER
+name: hvble_task
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -31,6 +31,7 @@ dependencies:
   flutter_launcher_icons: ^0.8.1
   flutter_blue: ^0.7.0
   flutter_spinkit: "^4.1.2"
+
 
 
 dev_dependencies:

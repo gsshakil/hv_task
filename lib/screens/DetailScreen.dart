@@ -95,11 +95,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     SizedBox(
                       width: 20,
                     ),
-                    Text(
-                        widget.device.name == null || widget.device.name.isEmpty
-                            ? 'Unknown Device'
-                            : widget.device.name,
-                        style: Theme.of(context).textTheme.bodyText1),
+                    Flexible(
+                      child: Text(
+                          widget.device.name == null ||
+                                  widget.device.name.isEmpty
+                              ? 'Unknown Device'
+                              : widget.device.name,
+                          style: Theme.of(context).textTheme.bodyText1),
+                    ),
                   ],
                 ),
                 SizedBox(
