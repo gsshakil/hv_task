@@ -123,7 +123,46 @@ class _HomeScreenState extends State<HomeScreen> {
                   : device.name),
               subtitle: Text(
                   device.id == null ? 'NO MAC ID FOUND' : device.id.toString()),
-              leading: Icon(Icons.bluetooth),
+              leading: Builder(
+                builder: (context) {
+                  switch (device.type) {
+                    case BluetoothDeviceType.unknown:
+                      {
+                        return Icon(
+                          Icons.bluetooth,
+                        );
+                      }
+                      break;
+                    case BluetoothDeviceType.dual:
+                      {
+                        return Icon(
+                          Icons.tv,
+                        );
+                      }
+                      break;
+                    case BluetoothDeviceType.le:
+                      {
+                        return Icon(
+                          Icons.blur_circular_rounded,
+                        );
+                      }
+                      break;
+                    case BluetoothDeviceType.classic:
+                      {
+                        return Icon(
+                          Icons.bluetooth_outlined,
+                        );
+                      }
+                      break;
+                    default:
+                      {
+                        return Icon(
+                          Icons.tv,
+                        );
+                      }
+                  }
+                },
+              ),
               trailing: IconButton(
                 icon: Icon(Icons.add),
                 onPressed: () {},
