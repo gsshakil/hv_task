@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:hvble_task/screens/HomeScreen.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'HV Bluetooth Finder',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+    );
+  }
+}
